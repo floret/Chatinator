@@ -16,7 +16,7 @@ namespace Chatinator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChat());
+            Application.Run(new frmLogin());
         }
     }
 }

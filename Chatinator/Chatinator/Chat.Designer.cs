@@ -31,6 +31,8 @@
             this.txbInput = new System.Windows.Forms.TextBox();
             this.btnPost = new System.Windows.Forms.Button();
             this.lbxOutput = new System.Windows.Forms.ListBox();
+            this.lblTopic = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbInput
@@ -58,11 +60,34 @@
             this.lbxOutput.Size = new System.Drawing.Size(367, 329);
             this.lbxOutput.TabIndex = 3;
             // 
+            // lblTopic
+            // 
+            this.lblTopic.AutoSize = true;
+            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopic.ForeColor = System.Drawing.Color.Red;
+            this.lblTopic.Location = new System.Drawing.Point(23, 36);
+            this.lblTopic.Name = "lblTopic";
+            this.lblTopic.Size = new System.Drawing.Size(92, 17);
+            this.lblTopic.TabIndex = 4;
+            this.lblTopic.Text = "Topic: Main";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(26, 10);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 447);
+            this.ClientSize = new System.Drawing.Size(734, 462);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblTopic);
             this.Controls.Add(this.lbxOutput);
             this.Controls.Add(this.btnPost);
             this.Controls.Add(this.txbInput);
@@ -78,6 +103,8 @@
         private System.Windows.Forms.TextBox txbInput;
         private System.Windows.Forms.Button btnPost;
         private System.Windows.Forms.ListBox lbxOutput;
+        private System.Windows.Forms.Label lblTopic;
+        private System.Windows.Forms.Button btnBack;
     }
 }
 

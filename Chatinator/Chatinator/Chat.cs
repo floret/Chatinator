@@ -23,5 +23,13 @@ namespace Chatinator
         {
             lbxOutput.Items.Add(txbInput.Text);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form FrmLogin = new frmLogin();//create a new instance of the form
+            FrmLogin.Show();//shows the form
+            FrmLogin.Activate();//activates the form
+            this.Dispose(false);//disposes the current form
+        }
     }
 }
