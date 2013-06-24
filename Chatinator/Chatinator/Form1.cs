@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Chatinator
 {
-    public partial class Form1 : Form
+    public partial class frmChat : Form
     {
-        public Form1()
+        public frmChat()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// Clicking this button adds the text in txbInput to lsbOutput.
+        /// </summary>
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+            lbxOutput.Items.Add(txbInput.Text);
         }
     }
 }
