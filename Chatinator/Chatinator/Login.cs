@@ -19,14 +19,20 @@ namespace Chatinator
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (lsbOpenPublicChats.Items.Contains(txbChat.Text) != true)
+            //check if chat name exists or not 
+            if (lsbOpenPublicChats.Items.Contains(txbChat.Text) == true)
+            {
+                //show error message: chat already exists.
+            }
+            else if (lsbOpenPublicChats.Items.Contains(txbChat.Text) != true)
             {
                 lsbOpenPublicChats.Items.Add(txbChat.Text);
-            }
-            Form FrmChat = new frmChat();//create a new instance of the form
-            FrmChat.Show();//shows the form
-            FrmChat.Activate();//activates the form
-            this.Dispose(false);//disposes the current form
+                //
+                //Form FrmChat = new frmChat();//create a new instance of the form
+                //FrmChat.Show();//shows the form
+                //FrmChat.Activate();//activates the form
+                //this.Dispose(false);//disposes the current form
+            }            
         }
     }
 }
