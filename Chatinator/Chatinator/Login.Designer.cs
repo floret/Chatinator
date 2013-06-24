@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbUsername = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txbChat = new System.Windows.Forms.TextBox();
             this.lsbOpenPublicChats = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txbUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Username";
+            this.txbUsername.Location = new System.Drawing.Point(186, 187);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Size = new System.Drawing.Size(156, 20);
+            this.txbUsername.TabIndex = 0;
+            this.txbUsername.Text = "Username";
             // 
             // btnSubmit
             // 
@@ -79,7 +79,7 @@
             this.Controls.Add(this.lsbOpenPublicChats);
             this.Controls.Add(this.txbChat);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbUsername);
             this.Name = "frmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -89,7 +89,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txbChat;
         private System.Windows.Forms.ListBox lsbOpenPublicChats;

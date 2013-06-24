@@ -16,12 +16,13 @@ namespace Chatinator
         {
             InitializeComponent();
         }
+        CUsername Username = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.
         /// <summary>
         /// Clicking this button adds the text in txbInput to lsbOutput.
         /// </summary>
         private void btnPost_Click(object sender, EventArgs e)
         {
-            lbxOutput.Items.Add(txbInput.Text);
+            lbxOutput.Items.Add(Username.Username() +": "+ txbInput.Text);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
