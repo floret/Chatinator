@@ -5,7 +5,7 @@ this is/will/might be/is/am a chat client that I intend to create, my main motiv
 
 My goals are completely insame and in the course of writing this application I am probably going to have to rewrite it a few times, seeing as I'm in completely above my head.
 
-Without further ado here is my planning so var:
+Without further ado here is my planning so far:
 ===============================================
 
 
