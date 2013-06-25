@@ -27,7 +27,6 @@ namespace Chatinator
             //check if chat already name exists or not 
             if (lsbOpenPublicChats.Items.Contains(txbChat.Text) == true)
             {
-
                 UserInput = Username.Username(txbUsername.Text);
                 //
                 Form FrmChat = new frmChat();//create a new instance of the form

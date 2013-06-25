@@ -15,8 +15,6 @@ namespace Chatinator
         public CChatContents()
         {
  
-        }
-
-        
+        }        
     }
 }

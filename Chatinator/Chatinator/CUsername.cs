@@ -18,8 +18,7 @@ namespace Chatinator
         }
         string IUser;
         public string Username(string InputUser)
-        {
-            
+        {          
             IUser = InputUser;
             return InputUser;
         }
