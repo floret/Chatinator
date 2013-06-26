@@ -29,18 +29,18 @@ namespace Chatinator
             //UserInput  
             if (anonFlag == 1)
             {
-                lbxOutput.Items.Add("Anonamous Coward" + ": " + txbInput.Text);
+                lbxOutput.Items.Add("Anonamous Coward" + ": " + txbInput.Text);//posting anonamously.
             }
             else if (anonFlag == 0)//not anon
             {
                 if ((txbInput.Text == "/unlurk") || (txbInput.Text == "/Unlurk"))
                 {
-                    lbxOutput.Items.Add(User.Username() + " has stopped lurking.");
-                    lbxActiveUser.Items.Add(User.Username());
+                    lbxOutput.Items.Add(User.Username() + " has stopped lurking.");//user has become active
+                    lbxActiveUser.Items.Add(User.Username());//add user to active users listbox.
                     unlurkFlag = 1;//no longer lurking
-                }               
+                }
                 else if ((txbInput.Text != "/unlurk") || (txbInput.Text != "/Unlurk"))//posts normally
-                {
+                {//non comand posting starts here***
                     if (unlurkFlag == 0)//forced to unlurk
                     {
                         lbxOutput.Items.Add(User.Username() + " has stopped lurking.");
@@ -52,7 +52,7 @@ namespace Chatinator
                     {
                         lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
                     }
-                }             
+                }//non comand posting ends here***
             }
         }
         /// <summary>
@@ -68,14 +68,14 @@ namespace Chatinator
 
         private void cbxAnon_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             if (cbxAnon.Checked == true)
             {
-                anonFlag = 1;
+                anonFlag = 1;//user wants to post anonamously
             }
             else if (cbxAnon.Checked != true)
             {
-                anonFlag = 0;
+                anonFlag = 0;//user wants to post under their username.
             }
         }
     }
