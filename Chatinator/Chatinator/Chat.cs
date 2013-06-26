@@ -64,3 +64,4 @@ namespace Chatinator
 }
 //!Username doesn't get displayed only : message.
 //!find a way to use an existing instancs so that the values don't get reset to null.  
+//Outline
