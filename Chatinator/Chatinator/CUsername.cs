@@ -9,7 +9,7 @@ namespace Chatinator
     /// <summary>
     /// This class will be used to match usernames to chat messages.
     /// </summary>
-    class CUsername
+    class CUsername : ICryoStasis
     {
         //Constructor
         public CUsername()
@@ -35,5 +35,11 @@ namespace Chatinator
         {
             return IUser;//returns the username 
         }
+
+        public void UserSave(string Luser)
+        {
+            Luser = IUser;
+        }
     }
 }
+//!a new instanc is getting created in Chat.cs and IUser is getting reset to null.

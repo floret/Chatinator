@@ -51,6 +51,7 @@
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="CChatContents.cs" />
+    <Compile Include="ICryoStasis.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
