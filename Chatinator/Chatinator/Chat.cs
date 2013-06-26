@@ -33,6 +33,7 @@ namespace Chatinator
             }
             else if (anonFlag == 0)//not anon
             {
+                //TODO: make the commands into a class.
                 if ((txbInput.Text == "/unlurk") || (txbInput.Text == "/Unlurk"))
                 {
                     lbxOutput.Items.Add(User.Username() + " has stopped lurking.");//user has become active
@@ -82,4 +83,6 @@ namespace Chatinator
 }
 //!Username doesn't get displayed only : message.
 //!find a way to use an existing instancs so that the values don't get reset to null.  
+//TODO: make the commands into a class.
+//
 //Outline
