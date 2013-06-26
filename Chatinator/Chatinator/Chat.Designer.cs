@@ -34,6 +34,7 @@
             this.lblTopic = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.cbxAnon = new System.Windows.Forms.CheckBox();
+            this.lbxActiveUser = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txbInput
@@ -93,11 +94,23 @@
             this.cbxAnon.UseVisualStyleBackColor = true;
             this.cbxAnon.CheckedChanged += new System.EventHandler(this.cbxAnon_CheckedChanged);
             // 
+            // lbxActiveUser
+            // 
+            this.lbxActiveUser.FormattingEnabled = true;
+            this.lbxActiveUser.Items.AddRange(new object[] {
+            "Active Users:",
+            "==========="});
+            this.lbxActiveUser.Location = new System.Drawing.Point(426, 83);
+            this.lbxActiveUser.Name = "lbxActiveUser";
+            this.lbxActiveUser.Size = new System.Drawing.Size(115, 173);
+            this.lbxActiveUser.TabIndex = 7;
+            // 
             // frmChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 462);
+            this.Controls.Add(this.lbxActiveUser);
             this.Controls.Add(this.cbxAnon);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTopic);
@@ -119,6 +132,7 @@
         private System.Windows.Forms.Label lblTopic;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.CheckBox cbxAnon;
+        private System.Windows.Forms.ListBox lbxActiveUser;
     }
 }
 

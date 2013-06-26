@@ -23,7 +23,7 @@ namespace Chatinator
         /// Receives the username and stores it in IUser.
         /// </summary>
         public void Username(string InputUser)//used by Login.cs to get input.
-        {          
+        {
             IUser = InputUser;//saves the username.           
         }
 
@@ -33,7 +33,11 @@ namespace Chatinator
         /// </summary>
         public string Username()//used from Chat.cs
         {
-            return IUser;//returns the username 
+            //return IUser;//returns the username
+            //
+            string a = "floret";
+            return a;
+            //
         }
     }
 }

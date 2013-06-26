@@ -20,7 +20,7 @@ namespace Chatinator
 
         CUsername User = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
         int anonFlag = 0;
-
+        int unlurkFlag = 0;
         /// <summary>
         /// Clicking this button adds the text in txbInput to lsbOutput.
         /// </summary>
@@ -31,10 +31,28 @@ namespace Chatinator
             {
                 lbxOutput.Items.Add("Anonamous Coward" + ": " + txbInput.Text);
             }
-            else if (anonFlag == 0)
+            else if (anonFlag == 0)//not anon
             {
-                //!Username doesn't get displayed only : message.
-                lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post.  
+                if ((txbInput.Text == "/unlurk") || (txbInput.Text == "/Unlurk"))
+                {
+                    lbxOutput.Items.Add(User.Username() + " has stopped lurking.");
+                    lbxActiveUser.Items.Add(User.Username());
+                    unlurkFlag = 1;//no longer lurking
+                }               
+                else if ((txbInput.Text != "/unlurk") || (txbInput.Text != "/Unlurk"))//posts normally
+                {
+                    if (unlurkFlag == 0)//forced to unlurk
+                    {
+                        lbxOutput.Items.Add(User.Username() + " has stopped lurking.");
+                        lbxActiveUser.Items.Add(User.Username());
+                        //!Username doesn't get displayed only : message.
+                        lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
+                    }
+                    if (unlurkFlag == 1)//already active
+                    {
+                        lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
+                    }
+                }             
             }
         }
         /// <summary>
@@ -42,10 +60,10 @@ namespace Chatinator
         /// </summary>
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Form FrmLogin = new frmLogin();//create a new instance of the form
-            FrmLogin.Show();//shows the form
-            FrmLogin.Activate();//activates the form
-            this.Dispose(false);//disposes the current form
+            Form FrmLogin = new frmLogin();
+            FrmLogin.Show();
+            FrmLogin.Activate();
+            this.Dispose(false);
         }
 
         private void cbxAnon_CheckedChanged(object sender, EventArgs e)
