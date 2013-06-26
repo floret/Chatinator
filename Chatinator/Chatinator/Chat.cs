@@ -19,14 +19,23 @@ namespace Chatinator
         }
 
         CUsername User = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
-        
+        int anonFlag = 0;
+
         /// <summary>
         /// Clicking this button adds the text in txbInput to lsbOutput.
         /// </summary>
         private void btnPost_Click(object sender, EventArgs e)
         {
-            //UserInput                            
-            lbxOutput.Items.Add(User.Username() + ": "  + txbInput.Text);//adds username: before post.   
+            //UserInput  
+            if (anonFlag == 1)
+            {
+                lbxOutput.Items.Add("Anonamous Coward" + ": " + txbInput.Text);
+            }
+            else if (anonFlag == 0)
+            {
+                //!Username doesn't get displayed only : message.
+                lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post.  
+            }
         }
         /// <summary>
         /// Clicking this button takes you back to the Login screen.
@@ -38,5 +47,20 @@ namespace Chatinator
             FrmLogin.Activate();//activates the form
             this.Dispose(false);//disposes the current form
         }
+
+        private void cbxAnon_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (cbxAnon.Checked == true)
+            {
+                anonFlag = 1;
+            }
+            else if (cbxAnon.Checked != true)
+            {
+                anonFlag = 0;
+            }
+        }
     }
 }
+//!Username doesn't get displayed only : message.
+//!find a way to use an existing instancs so that the values don't get reset to null.  
