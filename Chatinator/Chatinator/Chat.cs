@@ -18,17 +18,19 @@ namespace Chatinator
             InitializeComponent();
         }
 
-        CUsername Username = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
-     
+        CUsername User = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
+        
         /// <summary>
         /// Clicking this button adds the text in txbInput to lsbOutput.
         /// </summary>
         private void btnPost_Click(object sender, EventArgs e)
         {
             //UserInput                            
-            lbxOutput.Items.Add(Username.Username() + ": "  + txbInput.Text);
+            lbxOutput.Items.Add(User.Username() + ": "  + txbInput.Text);//adds username: before post.   
         }
-
+        /// <summary>
+        /// Clicking this button takes you back to the Login screen.
+        /// </summary>
         private void btnBack_Click(object sender, EventArgs e)
         {
             Form FrmLogin = new frmLogin();//create a new instance of the form
