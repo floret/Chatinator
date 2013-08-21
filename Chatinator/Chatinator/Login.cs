@@ -28,7 +28,7 @@ namespace Chatinator
             //check if chat already exists or not 
             if (lsbOpenPublicChats.Items.Contains(txbChat.Text) == true)//chat exists join it
             {
-                EnteredName.Username(txbUsername.Text);//gives entered username to CUsername.cs               
+                //EnteredName.Username(txbUsername.Text);//gives entered username to CUsername.cs               
                 //UserInput = EnteredName.Username(txbUsername.Text);
                 //
                 Form FrmChat = new frmChat();

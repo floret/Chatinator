@@ -26,7 +26,7 @@ namespace Chatinator
         private void btnPost_Click(object sender, EventArgs e)
         {
             //UserInput                            
-            lbxOutput.Items.Add(User.Username() + ": "  + txbInput.Text);//adds username: before post.   
+            //lbxOutput.Items.Add(User.Username() + ": "  + txbInput.Text);//adds username: before post.   
         }
         /// <summary>
         /// Clicking this button takes you back to the Login screen.
