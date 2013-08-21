@@ -18,7 +18,7 @@ namespace Chatinator
             InitializeComponent();
         }
 
-        CUsername User = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
+        CUsername Username = new CUsername();//!find a way to use an existing instancs so that the values don't get reset to null.   
         int anonFlag = 0;
         int unlurkFlag = 0;
         /// <summary>
@@ -36,22 +36,24 @@ namespace Chatinator
                 //TODO: make the commands into a class.
                 if ((txbInput.Text == "/unlurk") || (txbInput.Text == "/Unlurk"))
                 {
-                    lbxOutput.Items.Add(User.Username() + " has stopped lurking.");//user has become active
-                    lbxActiveUser.Items.Add(User.Username());//add user to active users listbox.
+                    //lbxOutput.Items.Add(User.Username() + " has stopped lurking.");//user has become active
+                    //lbxActiveUser.Items.Add(User.Username());//add user to active users listbox.
                     unlurkFlag = 1;//no longer lurking
                 }
                 else if ((txbInput.Text != "/unlurk") || (txbInput.Text != "/Unlurk"))//posts normally
                 {//non comand posting starts here***
                     if (unlurkFlag == 0)//forced to unlurk
                     {
-                        lbxOutput.Items.Add(User.Username() + " has stopped lurking.");
-                        lbxActiveUser.Items.Add(User.Username());
-                        //!Username doesn't get displayed only : message.
-                        lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
+                        string a = Username.setUser;//wtf is automatic step over.
+
+                        lbxOutput.Items.Add(Username.setUser + " has stopped lurking.");
+                        //lbxActiveUser.Items.Add(User.Username());
+                        ////!Username doesn't get displayed only : message.
+                        //lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
                     }
                     if (unlurkFlag == 1)//already active
                     {
-                        lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
+                        //lbxOutput.Items.Add(User.Username() + ": " + txbInput.Text);//adds username: before post. 
                     }
                 }//non comand posting ends here***
             }

@@ -10,34 +10,12 @@ namespace Chatinator
     /// This class will be used to match usernames to chat messages.
     /// </summary>
     class CUsername
-    {
-        //Constructor
-        public CUsername()
+    {     
+        private string user;
+        public string setUser
         {
-
-        }
-
-        string IUser;
-
-        /// <summary>
-        /// Receives the username and stores it in IUser.
-        /// </summary>
-        public void Username(string InputUser)//used by Login.cs to get input.
-        {
-            IUser = InputUser;//saves the username.           
-        }
-
-        //!a new instanc is getting created in Chat.cs and IUser is getting reset to null.
-        /// <summary>
-        /// Gives the username to Chat.cs
-        /// </summary>
-        public string Username()//used from Chat.cs
-        {
-            //return IUser;//returns the username
-            //
-            string a = "floret";
-            return a;
-            //
+            get { return this.user; }
+            set { this.user = value; }
         }
     }
 }
